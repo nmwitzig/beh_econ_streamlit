@@ -1,10 +1,11 @@
 import constants
 from utils.html_factory import CSSStyle, make_div, make_img, st_write_bs4
+import streamlit as st
 
 # Title
-TITLE_P1 = "Flexible ML Experiment Tracking System"
-TITLE_P2 = "for Python Coders"
-TITLE_P3 = "with DVC and Streamlit"
+TITLE_P1 = "Tutorial Behavioral Economics"
+TITLE_P2 = "Summer 2022"
+TITLE_P3 = "additional material"
 
 BIG_TITLE_STYLE = CSSStyle(
     text_align="center",
@@ -36,7 +37,7 @@ AUTHOR_DIV = make_div(style=AUTHOR_STYLE, text=constants.AUTHOR)
 # Conf Logo
 BIG_LOGO_STYLE = CSSStyle(
     text_align="center",
-    width="80%",
+    width="5%",
     margin_left="auto",
     margin_right="auto",
     display="block",
@@ -53,3 +54,8 @@ def st_write_title():
     st_write_bs4(BIG_TITLE_DIV)
     st_write_bs4(AUTHOR_DIV)
     st_write_bs4(BIG_LOGO_IMG)
+    st.write("\n")
+    st.warning(""" **Note:** \n
+    This additional material does not claim completeness nor correctness. It's just a collection of tools
+    *potentially* useful to better understand some of the topics we cover in the tutorials.    
+     """)

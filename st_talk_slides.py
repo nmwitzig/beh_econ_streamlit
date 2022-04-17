@@ -15,7 +15,7 @@ st.set_page_config(
 # Sidebar Header
 sidebar_header_logo = make_img(
     src=constants.CONFERENCE_LOGO_PATH,
-    style=CSSStyle(width="64px", flex=1, margin_right="20px"),
+    style=CSSStyle(width="64px",height="64px", flex=1, margin_right="20px", margin_top="20px"),
 )
 sidebar_header_title = make_div(style=CSSStyle(text_align="left", flex=3))
 sidebar_header_title.extend(
@@ -42,10 +42,10 @@ with st.sidebar:
     st_write_bs4(sidebar_header)
 
 # Main Chapter selection
-NO_CHAPTER = "👋 Hello :)"
+NO_CHAPTER = "Introduction"
 
 selected_part = st.sidebar.selectbox(
-    label="📚 Today's menu:",
+    label="📚 Content",
     options=[NO_CHAPTER, *constants.CHAPTERS],
 )
 
