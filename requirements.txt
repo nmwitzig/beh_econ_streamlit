@@ -79,12 +79,6 @@ jedi==0.18.1
 Jinja2==3.0.3
 jmespath==0.10.0
 jsonschema==4.4.0
-jupyter-client==7.1.2
-jupyter-core==4.9.2
-jupyterlab-pygments==0.1.2
-jupyterlab-widgets==1.0.2
-keras==2.8.0
-Keras-Preprocessing==1.1.2
 libclang==13.0.0
 mailchecker==4.1.14
 Markdown==3.3.6
@@ -169,12 +163,6 @@ streamlit-book==0.7.0
 streamlit-option-menu==0.3.2
 tabulate==0.8.9
 tenacity==8.0.1
-tensorboard==2.8.0
-tensorboard-data-server==0.6.1
-tensorboard-plugin-wit==1.8.1
-tensorflow==2.8.0
-tensorflow-io-gcs-filesystem==0.24.0
-termcolor==1.1.0
 terminado==0.13.3
 testpath==0.6.0
 text-unidecode==1.3
