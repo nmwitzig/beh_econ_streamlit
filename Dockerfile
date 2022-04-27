@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian
 
 ARG TERM=linux
 ARG DEBIAN_FRONTEND=noninteractive
