@@ -84,5 +84,5 @@ RUN pip install -r requirements.txt \
 
 ENV LD_LIBRARY_PATH=$ARROW_HOME/lib:$PARQUET_HOME/lib:$ARROW_SOURCE_PATH/cpp/jemalloc_ep-prefix/src/jemalloc_ep/dist/lib:$LD_LIBRARY_PATH
 WORKDIR /root
-COPY st_talk_slides.py
+COPY st_talk_slides.py st_talk_slides.py
 RUN python st_talk_slides.py -v
