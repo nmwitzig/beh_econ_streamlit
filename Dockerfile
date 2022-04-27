@@ -24,9 +24,9 @@ RUN apt-get update                                          \
       pkg-config                                            \
       python-pip                                            \
     && rm -rf /var/lib/apt/lists/*
-RUN pip install \
-      cython    \
-      pandas
+#RUN pip install \
+#      cython    \
+#      pandas
 
 
 ENV ARROW_SOURCE_PATH=/usr/local/src/arrow         \
@@ -72,11 +72,11 @@ RUN make install
 ##
 WORKDIR $ARROW_SOURCE_PATH/python
 RUN pip install -r requirements.txt \
-    && python setup.py build_ext    \
-      --with-parquet                \
-      --with-jemalloc               \
-      --build-type=release          \
-      install
+#    && python setup.py build_ext    \
+#      --with-parquet                \
+#      --with-jemalloc               \
+#      --build-type=release          \
+#      install
 
 
 ENV LD_LIBRARY_PATH=$ARROW_HOME/lib:$PARQUET_HOME/lib:$ARROW_SOURCE_PATH/cpp/jemalloc_ep-prefix/src/jemalloc_ep/dist/lib:$LD_LIBRARY_PATH
