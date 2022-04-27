@@ -1,5 +1,7 @@
 FROM debian
 
+FROM python:3.8-slim-buster
+
 ARG TERM=linux
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -22,11 +24,11 @@ RUN apt-get update                                          \
       libtool                                               \
       make                                                  \
       pkg-config                                            \
-      python-pip                                            \
+      python3-pip                                            \
     && rm -rf /var/lib/apt/lists/*
-#RUN pip install \
-#      cython    \
-#      pandas
+RUN pip3 install \
+      cython    \
+      pandas
 
 
 ENV ARROW_SOURCE_PATH=/usr/local/src/arrow         \
@@ -66,6 +68,7 @@ RUN cmake                                  \
 RUN make -j4
 RUN make install
 
+COPY requirements.txt requirements.txt
 
 ##
 ## pyarrow
@@ -81,5 +84,5 @@ RUN pip install -r requirements.txt \
 
 ENV LD_LIBRARY_PATH=$ARROW_HOME/lib:$PARQUET_HOME/lib:$ARROW_SOURCE_PATH/cpp/jemalloc_ep-prefix/src/jemalloc_ep/dist/lib:$LD_LIBRARY_PATH
 WORKDIR /root
-COPY example.py .
+COPY st_talk_slides.py
 RUN python st_talk_slides.py -v
