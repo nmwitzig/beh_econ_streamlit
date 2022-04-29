@@ -59,3 +59,4 @@ def st_write_title():
     This additional material does not claim completeness nor correctness. It's just a collection of tools
     *potentially* useful to better understand some of the topics we cover in the tutorials.    
      """)
+

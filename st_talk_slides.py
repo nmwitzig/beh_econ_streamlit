@@ -4,6 +4,8 @@ import constants
 from pages import conclusion, dig_with_streamlit, dvc_and_streamlit, dvc_training_pipeline, introduction
 from utils.html_factory import CSSStyle, make_div, make_img, st_write_bs4
 from utils.title import st_write_title
+from utils.feedback import st_write_feedback
+
 
 # Streamlit webpage properties
 st.set_page_config(
@@ -54,6 +56,8 @@ if selected_part == NO_CHAPTER:
     st_write_title()
 elif selected_part == constants.CHAPTER_INTRODUCTION:
     introduction.st_show()
+elif selected_part == constants.CHAPTER_FEEDBACK:
+    st_write_feedback()
 elif selected_part == constants.CHAPTER_ML_PIPELINE:
     dvc_training_pipeline.st_show()
 elif selected_part == constants.CHAPTER_ML_ANALYSIS:

@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
-st.title("Start: Generate and plot data")
+st.title("Start: Exponential Discounting")
 
 
 col_a, col_b = st.columns(2)
@@ -19,7 +19,7 @@ def samuelson(x, delta=0.9):
     return delta**x
 
 # Generate time variable, apply function
-time = np.linspace(0,MAX_TIME + 1,100)
+time = np.arange(0,MAX_TIME + 1,1)
 y_a = samuelson(time)
 
 # Show first 5 Elements of y vector

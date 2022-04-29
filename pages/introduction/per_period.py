@@ -19,14 +19,14 @@ def quasi_hyperbolic(x,beta=0.9, delta=0.9):
     import numpy as np #ignore
     return np.where(x > 0, beta*(delta**x), 1)
 
-time = np.linspace(0,MAX_TIME + 1,100)
+time = np.arange(0,MAX_TIME + 1,1)
 y_a = samuelson(time)
 y_b = hyperbolic(time)
 y_c = loewenstein(time)
 y_d = quasi_hyperbolic(time)
 
 
-st.title("Start: Generate and plot data")
+st.title("Per period discounting factor + Discount rates")
 
 
 
@@ -56,7 +56,7 @@ fig = plt.figure(figsize=(10, 4))
 for y, y1, label, color in zip(y_list, y_1_list, labels, colors):
     plt.plot(time[:-1],(y1/y), color, label=label)
 plt.legend()
-plt.title("Per-period Discounting Functions")
+plt.title("Per-period Discounting Factors")
 st.pyplot(fig)
 """
 
@@ -78,7 +78,7 @@ exec(gen_code, globals(), locals())
 
 col_a, _, col_c = st.columns([5, 1, 5])
 with col_a:
-    st.write("### Plot Data")
+    st.write("### Plot PPDF")
     with st.expander(label='Show Code'):
         st.code(plot_code1)
 
@@ -86,7 +86,7 @@ with col_a:
     exec(plot_code1, globals(), locals())
 
 with col_c:
-    st.write("### Plot Data")
+    st.write("### Plot DR")
     with st.expander(label='Show Code'):
         st.code(plot_code2)
 
