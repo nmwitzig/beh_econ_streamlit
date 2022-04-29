@@ -52,7 +52,7 @@ colors = ['r', 'b', 'g', 'y']
 plot_code1 = """
 import matplotlib.pyplot as plt
 
-fig = plt.figure(figsize=(10, 4))
+fig = plt.figure(figsize=(20, 8))
 for y, y1, label, color in zip(y_list, y_1_list, labels, colors):
     plt.plot(time[:-1],(y1/y), color, label=label)
 plt.legend()
@@ -61,7 +61,7 @@ st.pyplot(fig)
 """
 
 plot_code2 = """
-fig = plt.figure(figsize=(10, 4))
+fig = plt.figure(figsize=(20, 8))
 for y, y1, label, color in zip(y_list, y_1_list, labels, colors):
     plt.plot(time[:-1],((y/y1)-1), color, label=label)
 plt.legend()

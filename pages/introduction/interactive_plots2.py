@@ -33,7 +33,7 @@ def plotter(func, *args):
     y = func(time, *args)
     y_1 = np.roll(y,-1)
     y_1 = y_1[:-1]
-    fig = plt.figure(figsize=(10, 4))
+    fig = plt.figure(figsize=(20, 8))
     plt.plot(time[:-1],(y_1/y[:-1]))
     plt.ylim(0,1,0.1)
     plt.xlim(0,MAX_TIME)
@@ -46,7 +46,7 @@ def plotter1(func, *args):
     y = func(time, *args)
     y_1 = np.roll(y,-1)
     y_1 = y_1[:-1]
-    fig = plt.figure(figsize=(10, 4))
+    fig = plt.figure(figsize=(20, 8))
     plt.plot(time[:-1],((y[:-1]/y_1)-1))
     plt.ylim(0,1,0.1)
     plt.xlim(0,MAX_TIME)

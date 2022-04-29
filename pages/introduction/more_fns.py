@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
-st.title("Start: Generate and plot data")
+st.title("More Discount Functions")
 
 
 col_a, col_b = st.columns(2)
@@ -27,7 +27,7 @@ def quasi_hyperbolic(x,beta=0.9, delta=0.9):
     import numpy as np #ignore
     return np.where(x > 0, beta*(delta**x), 1)
 
-time = np.linspace(0,MAX_TIME + 1,100)
+time = np.arange(0,MAX_TIME + 1,1)
 y_a = samuelson(time)
 y_b = hyperbolic(time)
 y_c = loewenstein(time)
@@ -39,7 +39,7 @@ plot_code = """
 import matplotlib.pyplot as plt
 import streamlit as st
 
-fig = plt.figure(figsize=(10, 4))
+fig = plt.figure(figsize=(20, 8))
 plt.plot(time,y_a, 'r', label="A")
 plt.plot(time,y_b, 'b', label="B")
 plt.plot(time,y_c, 'g', label="C")
