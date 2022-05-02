@@ -30,7 +30,7 @@ st.dataframe(df.head())
 plot_code = """
 import matplotlib.pyplot as plt
 
-fig = plt.figure(figsize=(2.5, 1))
+fig = plt.figure(figsize=(5, 2))
 plt.plot(time,y_a)
 plt.title("Samuelson")
 plt.xlabel("Time")

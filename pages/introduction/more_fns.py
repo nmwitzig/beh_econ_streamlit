@@ -39,7 +39,7 @@ plot_code = """
 import matplotlib.pyplot as plt
 import streamlit as st
 
-fig = plt.figure(figsize=(2.5, 1))
+fig = plt.figure(figsize=(5, 2))
 plt.plot(time,y_a, 'r', label="A")
 plt.plot(time,y_b, 'b', label="B")
 plt.plot(time,y_c, 'g', label="C")

@@ -30,7 +30,7 @@ def quasi_hyperbolic(x,beta=0.9, delta=0.9):
 def plotter(func,time, *args):
     import matplotlib.pyplot as plt #again,pls ignore
     y = func(time, *args)
-    fig = plt.figure(figsize=(2.5, 1))
+    fig = plt.figure(figsize=(5, 2))
     plt.plot(time,y)
     plt.ylim(0,1,0.1)
     plt.xlim(0,MAX_TIME)
