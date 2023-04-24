@@ -1,7 +1,7 @@
 from pathlib import Path
 
 AUTHOR = "Niklas Witzig"
-CONFERENCE_DATE = "Summer 2022"
+CONFERENCE_DATE = "Summer 2023"
 CONFERENCE_NAME = "Tutorial Behavioral Economics"
 TITLE = "Additional files and tools for the JGU Behavioral Economics Tutorial"
 TITLE_SHORT = "Helper Tutorial"
@@ -24,6 +24,7 @@ PARAMS_PATH = CODE_DIR / "params.yaml"
 
 # Pages
 CHAPTER_INTRODUCTION = "Problem Set 1️⃣"
+CHATER_PS2 = "Problem Set 2️⃣"
 CHAPTER_FEEDBACK = "Feedback"
 #CHAPTER_ML_PIPELINE = "2️⃣ Let's do ML!"
 #CHAPTER_ML_ANALYSIS = "3️⃣ Let's build a UI!"
@@ -32,6 +33,7 @@ CHAPTER_FEEDBACK = "Feedback"
 
 CHAPTERS = [
     CHAPTER_INTRODUCTION,
+    #CHATER_PS2,
     CHAPTER_FEEDBACK,
     #CHAPTER_ML_PIPELINE,
     #CHAPTER_ML_ANALYSIS,
