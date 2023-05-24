@@ -25,8 +25,9 @@ def plotter(func, *args):
     plt.plot(self_money,y)
     plt.xlim(0,1000)
     plt.xlim(0,1000)
-    plt.xlabel("Self")
+    plt.xlabel("Payoff Self")
     plt.ylabel("Utility")
+    plt.plot(self_money,self_money, linestyle='--', alpha=0.5)
     plt.title("Fehr-Schmidt Utility Function")
     return st.pyplot(fig)
 """
