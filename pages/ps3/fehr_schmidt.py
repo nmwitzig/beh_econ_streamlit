@@ -8,22 +8,22 @@ st.title("Simple 2 Player Fehr Schmidt Utility Function")
 gen_code = """
 import streamlit as st
 import numpy as np
-MAX_SELF = 1000
 
-self_money = np.linspace(0,MAX_SELF+1,1000)
-
-def fehr_schmidt_plot(self_money,OTHER, alpha, beta):
+def fehr_schmidt_plot(OTHER, alpha, beta):
+    self_money = np.linspace(0,1001,1000)
     U = np.where(self_money < OTHER, self_money - (alpha * (OTHER - self_money)), self_money - (beta * (self_money - OTHER)))
     return U
     
 def plotter(func, *args):
     import matplotlib.pyplot as plt #again,pls ignore
     import numpy as np
-    y = func(self_money, *args)
+    self_money = np.linspace(0,1001,1000)
+
+    y = func(*args)
     fig = plt.figure(figsize=(5, 2))
     plt.plot(self_money,y)
-    plt.xlim(0,MAX_SELF)
-    plt.xlim(0,MAX_SELF)
+    plt.xlim(0,1000)
+    plt.xlim(0,1000)
     plt.xlabel("Self")
     plt.ylabel("Utility")
     plt.title("Fehr-Schmidt Utility Function")
