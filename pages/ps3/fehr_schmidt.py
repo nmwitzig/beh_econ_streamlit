@@ -10,8 +10,8 @@ import streamlit as st
 import numpy as np
 
 def fehr_schmidt_plot(OTHER, alpha, beta):
-    self_money = np.linspace(0,1001,1000)
     import numpy as np
+    self_money = np.linspace(0,1001,1000)
     U = np.where(self_money < OTHER, self_money - (alpha * (OTHER - self_money)), self_money - (beta * (self_money - OTHER)))
     return U
     
