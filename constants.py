@@ -25,6 +25,7 @@ PARAMS_PATH = CODE_DIR / "params.yaml"
 # Pages
 CHAPTER_INTRODUCTION = "Problem Set 1️⃣"
 CHATER_PS2 = "Problem Set 2️⃣"
+CHAPTER_PS3 = "Problem Set 3️⃣"
 CHAPTER_FEEDBACK = "Feedback"
 #CHAPTER_ML_PIPELINE = "2️⃣ Let's do ML!"
 #CHAPTER_ML_ANALYSIS = "3️⃣ Let's build a UI!"
@@ -34,6 +35,7 @@ CHAPTER_FEEDBACK = "Feedback"
 CHAPTERS = [
     CHAPTER_INTRODUCTION,
     #CHATER_PS2,
+    CHAPTER_PS3,
     CHAPTER_FEEDBACK,
     #CHAPTER_ML_PIPELINE,
     #CHAPTER_ML_ANALYSIS,
