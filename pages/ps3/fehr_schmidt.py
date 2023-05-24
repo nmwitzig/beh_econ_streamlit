@@ -12,7 +12,7 @@ MAX_SELF = 1000
 
 self = np.linspace(0,MAX_SELF+1,1000)
 
-def fehr_schmidt(self,OTHER=500, alpha, beta):
+def fehr_schmidt(self,OTHER, alpha, beta):
     U = np.where(self < OTHER, self - (alpha * (OTHER - self)), self - (beta * (self - OTHER)))
     return U
     
