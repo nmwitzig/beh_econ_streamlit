@@ -51,7 +51,4 @@ st.write('Please choose a value for Beta')
 beta = st.slider('Beta:', -1.0, 1.0, 0.0, 0.1)
 st.write("You chose Beta: ", beta)
 
-
-col1 = st.columns(1)
-with col1:
-    plotter(fehr_schmidt,OTHER, alpha, beta)
+plotter(fehr_schmidt,OTHER, alpha, beta)
