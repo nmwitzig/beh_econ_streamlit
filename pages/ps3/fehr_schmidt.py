@@ -12,7 +12,7 @@ MAX_SELF = 1000
 
 self = np.linspace(0,MAX_SELF+1,1000)
 
-def fehr_schmidt(self,OTHER, alpha, beta):
+def fehr_schmidt_plot(self,OTHER, alpha, beta):
     U = np.where(self < OTHER, self - (alpha * (OTHER - self)), self - (beta * (self - OTHER)))
     return U
     
@@ -51,4 +51,4 @@ st.write('Please choose a value for Beta')
 beta = st.slider('Beta:', -1.0, 1.0, 0.0, 0.1)
 st.write("You chose Beta: ", beta)
 
-plotter(fehr_schmidt,OTHER, alpha, beta)
+plotter(fehr_schmidt_plot,OTHER, alpha, beta)
