@@ -19,7 +19,7 @@ def fehr_schmidt_plot(self,OTHER, alpha, beta):
 def plotter(func, *args):
     import matplotlib.pyplot as plt #again,pls ignore
     import numpy as np
-    y = fehr_schmidt(time, *args)
+    y = func(self, *args)
     fig = plt.figure(figsize=(5, 2))
     plt.plot(self,y)
     plt.xlim(0,MAX_SELF)
