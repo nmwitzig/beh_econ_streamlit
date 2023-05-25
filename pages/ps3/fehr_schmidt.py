@@ -22,12 +22,12 @@ def plotter(func, *args):
 
     y = func(*args)
     fig = plt.figure(figsize=(5, 2))
-    plt.plot(self_money,y)
+    plt.plot(other_money,y)
     plt.xlim(0,1000)
     plt.xlim(0,1000)
     plt.xlabel("Payoff Self")
     plt.ylabel("Utility")
-    plt.plot(self_money,self_money, linestyle='--', alpha=0.5)
+    plt.plot(other_money,other_money, linestyle='--', alpha=0.5)
     plt.title("Fehr-Schmidt Utility Function")
     return st.pyplot(fig)
 """
