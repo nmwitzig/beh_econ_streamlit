@@ -25,7 +25,7 @@ def plotter(func, *args):
     plt.plot(other_money,y)
     plt.xlim(0,1000)
     plt.xlim(0,1000)
-    plt.xlabel("Payoff Self")
+    plt.xlabel("Payoff Other")
     plt.ylabel("Utility")
     plt.plot(other_money,other_money, linestyle='--', alpha=0.5)
     plt.title("Fehr-Schmidt Utility Function")
@@ -41,7 +41,7 @@ exec(gen_code, globals(), locals())
 
 # get field to input a number
 st.write('Please choose a value for Self')
-SELF_CONST = st.slider('Other:', 0, 1000, 500, 1)
+SELF_CONST = st.slider('Self:', 0, 1000, 500, 1)
 st.write("You chose Self: ", SELF_CONST)
 
 st.write('Please choose a value for Alpha')
