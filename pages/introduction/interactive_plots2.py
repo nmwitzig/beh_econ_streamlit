@@ -35,7 +35,7 @@ def plotter(func, *args):
     y_1 = y_1[:-1]
     fig = plt.figure(figsize=(5, 2))
     plt.plot(time[:-1],(y_1/y[:-1]))
-    plt.ylim(0,1,0.1)
+    plt.ylim(0,1)
     plt.xlim(0,MAX_TIME)
     plt.title("Per-period Discounting Factor")
     return st.pyplot(fig)
@@ -48,7 +48,7 @@ def plotter1(func, *args):
     y_1 = y_1[:-1]
     fig = plt.figure(figsize=(5, 2))
     plt.plot(time[:-1],((y[:-1]/y_1)-1))
-    plt.ylim(0,1,0.1)
+    plt.ylim(0,1)
     plt.xlim(0,MAX_TIME)
     plt.title("Discount Rate")
     return st.pyplot(fig)

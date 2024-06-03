@@ -32,7 +32,7 @@ def plotter(func,time, *args):
     y = func(time, *args)
     fig = plt.figure(figsize=(5, 2))
     plt.plot(time,y)
-    plt.ylim(0,1,0.1)
+    plt.ylim(0,1)
     plt.xlim(0,MAX_TIME)
     return st.pyplot(fig)
 """
