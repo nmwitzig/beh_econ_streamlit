@@ -1,7 +1,7 @@
 from pathlib import Path
 
 AUTHOR = "Niklas Witzig"
-CONFERENCE_DATE = "Summer 2023"
+CONFERENCE_DATE = "Summer 2024"
 CONFERENCE_NAME = "Tutorial Behavioral Economics"
 TITLE = "Additional files and tools for the JGU Behavioral Economics Tutorial"
 TITLE_SHORT = "Helper Tutorial"

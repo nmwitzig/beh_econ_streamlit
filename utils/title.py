@@ -4,7 +4,7 @@ import streamlit as st
 
 # Title
 TITLE_P1 = "Tutorial Behavioral Economics"
-TITLE_P2 = "Summer 2023"
+TITLE_P2 = "Summer 2024"
 TITLE_P3 = "additional material"
 
 BIG_TITLE_STYLE = CSSStyle(
